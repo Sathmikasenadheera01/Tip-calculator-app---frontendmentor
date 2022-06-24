@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-div">
+        <h3>SPLI<br />TTER</h3>
+      </div>
+
+      <div class="second-div">
+        <!-- bill, select-tip, number-of-people -->
+        <div class="second-left">
+          <div class="second-top">
+            <p class="bill">Bill</p>
+            <input type="text" class="input first" placeholder="0" id="bill"/>
+          </div>
+
+          <div class="second-second">
+            <p class="bill">Select Tip %</p>
+            <div class="buttons">
+              <button class="second-div-buttons" value="5" id="btn" onclick="getTip(this)">5%</button>
+              <button class="second-div-buttons" value="10" id="btn" onclick="getTip(this)">10%</button>
+              <button class="second-div-buttons" value="15" id="btn" onclick="getTip(this)">15%</button>
+              <button class="second-div-buttons" value="25" id="btn" onclick="getTip(this)">25%</button>
+              <button class="second-div-buttons" value="50" id="btn" onclick="getTip(this)">50%</button>
+              <button class="second-div-buttons custom">custom</button>
+            </div>
+          </div>
+
+          <div class="second-third">
+
+            <div class="numppl">
+              <div><p class="bill">Number of People</p></div>
+              <div><p id="error"></p></div>
+            </div>
+            
+      
+            <input type="text" class="input second" placeholder="0" id="numppl"/>
+          </div>
+        </div>
+
+        <div class="second-right">
+          <!-- Tip amount, total -->
+
+          <div>
+            <div class="third-flex">
+              <div class="tipamount">
+                <h4>Tip Amount</h4>
+                <p>/ person</p>
+              </div>
+  
+              <div>
+                <h1 id="tipamount">00</h1>
+              </div>
+            </div>
+  
+            <div class="fourth-flex">
+              <div class="tipamount">
+                <h4>Total</h4>
+                <p>/ person</p>
+              </div>
+  
+              <div>
+                <h1 id="total">00</h1>
+              </div>
+            </div>
+          </div>
+          
+
+          <button class="button" onclick="reset()">RESET</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
